@@ -133,6 +133,10 @@ function randText(newScText) {
 
 
 
+// Hello World
+
+
+
 document.querySelector(".sc-copy").addEventListener("click", () => {
     document.querySelector(".descriptor__input").select();
     document.execCommand("copy");
