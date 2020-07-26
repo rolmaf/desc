@@ -130,3 +130,15 @@ function randText(newScText) {
     newScText += Object.keys(sl)[randInd];
     return newScText;
 };
+
+
+
+document.querySelector(".sc-copy").addEventListener("click", () => {
+    document.querySelector(".descriptor__input").select();
+    document.execCommand("copy");
+});
+
+document.querySelector(".result-copy").addEventListener("click", () => {
+    document.querySelector(".result__input").select();
+    document.execCommand("copy");
+});
