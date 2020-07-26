@@ -1,0 +1,61 @@
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25;
+    border-top: 25;
+    align-content: center
+}
+
+body {
+    background: url(background.png);
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+.descriptor__btn, .scriptor__btn {
+    width: 210px;
+    height: 50px;
+    background-color: #757775;
+    border-radius: 10px;
+    margin: 5px 0px;
+    font-family: 'Balsamiq Sans', cursive;
+    color: white;
+    font-size: 15pt;    
+}
+
+.descriptor-btns {
+    text-align: center;
+}
+
+.descriptor__input {
+    width: 400px;
+    max-width: 400px;
+    height: 30px;
+    font-size: 15pt;
+    border-radius: 0px;
+    margin-top: 5px;
+    border: 4px solid rebeccapurple;
+    padding: 5px;
+}
+
+.result__input {
+    width: 400px;
+    max-width: 400px;
+    height: 30px;
+    font-size: 15pt;
+    border-radius: 0px;
+    margin-top: 5px;
+    border: 4px solid red;
+    padding: 5px;
+    background-color: white !important;
+}
+
+.anim {
+    transition: 1s;
+}
+
+.anim:hover {
+    transition: 1s;
+    transform: rotate(360deg);
+}
