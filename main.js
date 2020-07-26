@@ -1,3 +1,5 @@
+let plusdeg = true;
+
 let sl = {
     "й": "к",
     "ц": "е",
@@ -30,7 +32,10 @@ let sl = {
     "т": "ю",
     "ь": "й",
     "б": "ц",
-    "ю": "у"
+    "ю": "у",
+    "!": "!",
+    "?": "?",
+    "-": "-"
 };
 
 let sldesc = {
@@ -66,13 +71,16 @@ let sldesc = {
     "й": "ь",
     "ц": "б",
     "у": "ю",
-    " ": " "
+    " ": " ",
+    "!": "!",
+    "?": "?",
+    "-": "-"
 };
 
 document.querySelector(".scriptor__btn").addEventListener("click", () => {
     let text = document.querySelector(".descriptor__input").value;
     let arrText = [];
-    
+
     let scText = randText("");
 
     text = text.trim().toLowerCase();
@@ -122,11 +130,11 @@ document.querySelector(".descriptor__btn").addEventListener("click", () => {
 });
 
 function randText(newScText) {
-    let randInd = Math.round(Math.random()* 30);
+    let randInd = Math.round(Math.random() * 30);
     newScText += Object.keys(sl)[randInd];
-    randInd = Math.round(Math.random()* 30);
+    randInd = Math.round(Math.random() * 30);
     newScText += Object.keys(sl)[randInd];
-    randInd = Math.round(Math.random()* 30);
+    randInd = Math.round(Math.random() * 30);
     newScText += Object.keys(sl)[randInd];
     return newScText;
 };
@@ -145,4 +153,24 @@ document.querySelector(".sc-copy").addEventListener("click", () => {
 document.querySelector(".result-copy").addEventListener("click", () => {
     document.querySelector(".result__input").select();
     document.execCommand("copy");
+});
+
+document.querySelector(".arrow").addEventListener("click", () => {
+    let result = document.querySelector(".result__input").value;
+    let desc = document.querySelector(".descriptor__input").value;
+
+    document.querySelector(".result__input").value = desc;
+    document.querySelector(".descriptor__input").value = result;
+
+    if (plusdeg == true) {
+        document.querySelector(".arrow").classList.remove("minusdeg180");
+        document.querySelector(".arrow").classList.add("deg180");
+        plusdeg = false;
+        
+    } else {
+        document.querySelector(".arrow").classList.remove("deg180");
+        document.querySelector(".arrow").classList.add("minusdeg180");
+        plusdeg = true;
+    };
+
 });

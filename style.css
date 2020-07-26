@@ -65,11 +65,21 @@ body {
     background-color: white !important;
 }
 
-.anim {
+.deg180 {
+    transition: 1s;
+    transform: rotate(180deg);
+}
+
+.minusdeg180 {
+    transition: 1s;
+    transform: rotate(360deg);
+}
+
+/* .anim {
     transition: 1s;
 }
 
 .anim:hover {
     transition: 1s;
     transform: rotate(360deg);
-}
+} */
